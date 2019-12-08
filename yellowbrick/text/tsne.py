@@ -382,8 +382,8 @@ class TSNEVisualizer(TextVisualizer):
             self.ax.scatter(
                 points["x"], points["y"], c=colors[label], alpha=self.alpha, label=label
             )
-            for label, x, y in zip(labels,points["x"],points["y"]):
-                self.ax.annotate(label,(x,y))
+            for x, y in zip(points["x"], points["y"]):
+                self.ax.annotate(label, (x, y))
 
         return self.ax
 
